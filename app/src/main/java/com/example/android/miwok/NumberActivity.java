@@ -1,0 +1,16 @@
+package com.example.android.miwok;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class NumberActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_number);
+        TextView msg = (TextView)findViewById(R.id.tvNumbers);
+        msg.setText("Hello i'm Numbers");
+    }
+}

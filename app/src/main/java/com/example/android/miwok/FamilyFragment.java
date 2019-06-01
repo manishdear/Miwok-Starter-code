@@ -26,13 +26,12 @@ public class FamilyFragment extends Fragment {
                     if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
                         // Permanent loss of audio focus
                         releaseMediaPlayer();
-                    } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
-                        mMediaPlayer.pause();
-                        mMediaPlayer.seekTo(0);
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT  ||  focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                        if (mMediaPlayer != null) {
+                            mMediaPlayer.pause();
+                            mMediaPlayer.seekTo(0);
+                        }
                         // Pause playback
-                    } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
-                        mMediaPlayer.pause();
-                        mMediaPlayer.seekTo(0);
                         // Lower the volume, keep playing
                     } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
                         // Your app has been granted audio focus again

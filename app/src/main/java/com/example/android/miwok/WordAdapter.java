@@ -20,7 +20,8 @@ import java.util.List;
 public class WordAdapter extends ArrayAdapter<Word> {
 
     private MediaPlayer mediaPlayer;
-    private  int bColorRes;
+    private int bColorRes;
+
     public WordAdapter(@NonNull Context context, @NonNull List<Word> objects, int bColorRes) {
         super(context, 0, objects);
         this.bColorRes = bColorRes;
@@ -30,7 +31,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null){
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
@@ -38,11 +39,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
 
-        if(currentWord.hasImage()){
+        if (currentWord.hasImage()) {
             imageView.setImageResource(currentWord.getImage());
             imageView.setVisibility(View.VISIBLE);
-        }
-        else {
+        } else {
             imageView.setVisibility(View.GONE);
         }
 

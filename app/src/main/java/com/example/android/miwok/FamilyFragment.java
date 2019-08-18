@@ -53,7 +53,7 @@ public class FamilyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_family, container, false);
+        View rootView = inflater.inflate(R.layout.catagory_fragment, container, false);
 
         final ArrayList<Word> word = new ArrayList<>();
 
@@ -70,7 +70,7 @@ public class FamilyFragment extends Fragment {
 
         WordAdapter itemsAdapter = new WordAdapter(getContext(), word,R.color.category_family);
 
-        ListView listView = (ListView) rootView.findViewById(R.id.familyActivity);
+        ListView listView = (ListView) rootView.findViewById(R.id.fragment);
 
         listView.setAdapter(itemsAdapter);
 

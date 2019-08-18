@@ -53,7 +53,7 @@ public class NumberFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-       View rootView = inflater.inflate(R.layout.activity_category, container, false);
+       View rootView = inflater.inflate(R.layout.catagory_fragment, container, false);
 
         final ArrayList<Word> word = new ArrayList<>();
         word.add(new Word("One", "lutti", R.drawable.number_one, R.raw.number_one));
@@ -70,7 +70,7 @@ public class NumberFragment extends Fragment {
 
         WordAdapter itemsAdapter = new WordAdapter(getActivity(), word,R.color.category_numbers);
 
-        ListView listView = (ListView) rootView.findViewById(R.id.container);
+        ListView listView = (ListView) rootView.findViewById(R.id.fragment);
 
         listView.setAdapter(itemsAdapter);
 

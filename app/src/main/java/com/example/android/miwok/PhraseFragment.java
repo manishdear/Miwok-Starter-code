@@ -29,14 +29,19 @@ public class PhraseFragment extends Fragment {
                         releaseMediaPlayer();
                     }
                     else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
-                        mMediaPlayer.pause();
-                        mMediaPlayer.seekTo(0);
+                        if(mMediaPlayer != null) {
+                            mMediaPlayer.pause();
+                            mMediaPlayer.seekTo(0);
+                        }
                         // Pause playback
                     } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
-                        mMediaPlayer.pause();
-                        mMediaPlayer.seekTo(0);
+                        if(mMediaPlayer != null) {
+                            mMediaPlayer.pause();
+                            mMediaPlayer.seekTo(0);
+                        }
                         // Lower the volume, keep playing
-                    } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                    }
+                    else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
                         // Your app has been granted audio focus again
                         mMediaPlayer.start();
                     }

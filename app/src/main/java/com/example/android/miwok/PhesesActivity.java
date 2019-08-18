@@ -42,7 +42,7 @@ public class PhesesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pheses);
+        setContentView(R.layout.activity_category);
 
         final ArrayList<Word> word = new ArrayList<>();
 
@@ -69,7 +69,7 @@ public class PhesesActivity extends AppCompatActivity {
 
         WordAdapter itemsAdapter = new WordAdapter(this, word, R.color.category_phrases);
 
-        ListView listView = (ListView) findViewById(R.id.phrasesActivity);
+        ListView listView = (ListView) findViewById(R.id.container);
 
         listView.setAdapter(itemsAdapter);
 

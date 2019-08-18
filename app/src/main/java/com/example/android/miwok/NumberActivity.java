@@ -47,7 +47,7 @@ public class NumberActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_number);
+        setContentView(R.layout.activity_category);
 
         //String [] numbers ={"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"};
         final ArrayList<Word> word = new ArrayList<>();
@@ -65,7 +65,7 @@ public class NumberActivity extends AppCompatActivity {
 
        WordAdapter itemsAdapter = new WordAdapter(this, word,R.color.category_numbers);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.container);
 
         listView.setAdapter(itemsAdapter);
 

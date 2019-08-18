@@ -54,4 +54,9 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="16dp"
         app:srcCompat="@drawable/ic_play_arrow" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"/>
 </RelativeLayout>
